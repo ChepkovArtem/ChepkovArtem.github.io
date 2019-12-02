@@ -1,10 +1,21 @@
+html{
+  font-size: 16px;
+
+  @include tablets{
+    font-size: 15px;
+  }
+
+  @include phones{
+    font-size: 14px;
+  }
+}
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,19 +27,26 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
+  min-width: 95%;
   min-height: 100%;
   overflow: hidden;
+
+  @include tablets{
+    width: 95%;
+  }
 }
 
 .container {
-  width: 940px;
+  width: rem(940px);
   margin: 0 auto;
+  @include tablets{
+    width: 95%;
+  }
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +54,7 @@ body {
 
 .title {
   @include gagalin();
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
   line-height: 1;
 

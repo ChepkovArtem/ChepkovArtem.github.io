@@ -1,4 +1,4 @@
-.nav__order {
+.nav__order, .order {
   font-weight: bold;
   padding: 12px 15px;
   border-radius: 5px;
@@ -8,6 +8,7 @@
   color: $white;
   font-size: 13px;
   border: none;
+  transition: 0.5s;
   cursor: pointer;
   &:hover{
     background-color: $red-hover;

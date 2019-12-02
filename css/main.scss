@@ -6,6 +6,7 @@ $black-hover:#1f2122;
 $red: #e35028;
 $red-hover: #c1401e;
 $white: #fff;
+$grey:#575757;
 
 $z-fixed-menu: 100;
 
@@ -13,15 +14,21 @@ $z-fixed-menu: 100;
 @import "_must/normalize.scss";
 
 // setups
+@import "_must/media";
 @import "_must/fonts";
 @import "_must/layout";
 
 // blocks
 @import "blocks/header";
 @import "blocks/nav";
-@import "blocks/nav-order";
+@import "blocks/nav-order, order";
 @import "blocks/promo";
+@import "blocks/menu.scss";
+@import "blocks/team.scss";
+@import "blocks/delivery.scss";
+@import "blocks/contacts.scss";
 @import "blocks/about.scss";
 @import "blocks/reviews";
 @import "blocks/fixed-menu";
+@import "blocks/form";
 

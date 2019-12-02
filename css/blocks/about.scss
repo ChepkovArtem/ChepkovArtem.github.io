@@ -2,18 +2,16 @@
     background: url('../img/about/bg.png') center center no-repeat;
     background-size: cover;
 }
-.about__title{
-    text-align: center;
-    font-size: 72px;
-    @include gagalin();
-    color: $black;
-}
+
 .about__content{
-    padding-top: 100px;
+    padding-top: rem(100px);
 }
 .about__list{
     display: flex;
     justify-content: space-evenly;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .about__item{
     width: 30%;
@@ -21,17 +19,43 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @include phones{
+        margin-top: rem(20px);
+        width: 95%;
+        flex-direction: row;
+    }
+
+}
+.about__desc{
+    @include phones{
+        margin-left: rem(31px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+.about__icon{
+    height: rem(100px);
 }
 .about__name,.about__text{
-    padding-top: 30px;
+    padding-top: rem(30px);
     text-align: center;
+    @include phones{
+        padding-top: rem(10px);
+        text-align: left;
+    }
 }
 .about__name{
-    font-size: 24px;
+    font-size: rem(24px);
     @include lifehack();
     font-weight: 500;
 }
 .about__text{
     @include ubuntu();
-    font-size: 14px;
+    font-size: rem(14px);
+}
+.about__title{
+    text-align: center;
+    color: $black;
 }

@@ -14,29 +14,48 @@
 .promo__content {
   display: flex;
   align-items: center;
+  @include tablets{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .promo__title {
-  margin-left: 20px;
+  margin-left: rem(20px);
+  @include tablets{
+    text-align: center;
+  }
 }
 
 .promo__subtitle {
   @include lifehack();
-  margin-top: 20px;
-  font-size: 56px;
+  margin-top: rem(20px);
+  font-size: rem(56px);
   color: $white;
   line-height: 1;
+  @include tablets{
+    text-align: center;
+  }
 }
 
 .promo__scroll-btn {
-  width: 29px;
-  height: 15px;
+  width: rem(29px);
+  height: rem(15px);
   background-image: url("../img/icons/arrow-scroll.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
   position: absolute;
-  bottom: 30px;
+  bottom: rem(30px);
   left: 50%;
   transform: translateX(-50%);
+}
+.arrow{
+  width: rem(29px);
+  height: rem(15px);
+  position: absolute;
+  bottom: rem(30px);
+  left: 50%;
 }

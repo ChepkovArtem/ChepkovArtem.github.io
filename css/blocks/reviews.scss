@@ -9,11 +9,14 @@
   height: 50%;
   position: relative;
   filter: grayscale(100%);
-
   &:hover {
     .reviews__hover {
       opacity: 1;
     }
+  }
+  @include tablets{
+    flex-basis: 50%;
+    height: 25%;
   }
 }
 
@@ -38,28 +41,52 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  transition: 1s;
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .reviews__author{
   @include gagalin();
   color: $white;
-  font-weight: 14px;
+  font-weight: rem(14px);
+  @include phones{
+    font-weight: rem(24px);
+    color: $white;
+  }
 }
 .reviews__more{
   color: $white;
   text-transform: uppercase;
   @include ubuntu();
-  width: 115px;
-  height: 35px;
-  border-radius: 3px;
+  width: rem(115px);
+  height: rem(35px);
+  border-radius: rem(3px);
   border: none;
-  font-weight: 13px;
+  font-weight: rem(13px);
   background-color: $black;
   cursor: pointer;
+  transition: 0.6s;
   &:hover{
     background-color: $black-hover;
   }
+  @include tablets{
+    margin-bottom: rem(7px);
+  }
 }
 .reviews__text{
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: rem(20px);
+  padding-bottom: rem(10px);
+  @include tablets{
+    overflow: hidden;
+    padding-top: rem(7px);
+    text-align: center;
+  }
+  @include phones{
+    display: none;
+  }
 }

@@ -1,0 +1,119 @@
+.team{
+    background: url('../img/team/team-bg.png') center center no-repeat;
+    background-size: cover;
+}
+.team__bg{
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: $black;
+    opacity: 0.93;
+    @include tablets{
+        width: 100vw;
+    }
+}
+.team__title{
+    @include tablets{
+        text-align: center;
+    }
+}
+.team__container{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    @include tablets{
+        width: 95%;
+    }
+}
+.team__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.team__accordeon{
+    margin-top: rem(40px);
+}
+.team__person{
+    @include gagalin();
+    padding-top: rem(50px);
+    font-size: rem(14px);
+    color: $white;
+    cursor: pointer;
+    transition: 0.5s;
+    &:before{
+        content: url('../../img/team/acc_down.png');
+        margin-right: rem(10px);
+    }
+    &:hover{
+        color:$yellow;
+    }
+    &--active{
+        color:$yellow;
+    }
+    &--active + .person__content{
+        padding-top: rem(20px);
+        height: auto;
+        @include tablets{
+            height:auto;
+        }
+    }
+    @include tablets{
+        font-size: rem(24px);
+    }
+}
+.team__person--active:before{
+        content: url('../../img/team/acc_up.png');
+        margin-right: rem(10px);
+    }
+.person__avatar{
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: rem(97px);
+    height: rem(97px);
+}
+.person__content{
+    @include ubuntu();
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.person__desc{
+    color: $white;
+    font-size: rem(14px);
+    max-width: rem(240px);
+    padding-left: rem(40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablets{
+        padding-left: 0;
+        max-width: rem(360px);
+    }
+}
+.person__role{
+    font-weight: bold;
+    @include tablets{
+        margin-top: rem(15px);
+    }
+}
+.person__text{
+    font-weight: 300;
+    @include tablets{
+        margin-top: rem(15px);
+    }
+}
+.team__item{
+    @include tablets{
+        text-align: center;
+    }
+}

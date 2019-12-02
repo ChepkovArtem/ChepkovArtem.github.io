@@ -1,0 +1,85 @@
+.contacts{
+    position: relative;
+    background: url('../img/map.png') center center no-repeat;
+    background-size: cover;
+}
+.contacts__block{
+    width: 50%;
+    @include phones{
+        width: 95%;
+    }
+}
+.contacts__icon{
+    cursor: pointer;
+   fill: $grey;
+    height: rem(20px);
+    width: rem(20px);
+    transition: 1s;
+    &:hover{
+        fill: $white;
+    }
+}
+
+.contacts__footer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    background: url('../../img/form/bg-form.png') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.contacts__list{
+    margin-right: rem(60px);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include phones{
+        justify-content: center;
+        margin: 0;
+    }
+}
+.contacts__list .contacts__item:not(:first-child){
+    margin-left: rem(25px);
+}
+.contacts__contact{
+    margin: 10px 0px 5px 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include phones{
+        margin: 0;
+        text-align: center;
+        align-items: center;
+    }
+}
+.contacts__addres{
+    font-size: rem(14px);
+    color: $white;
+    @include ubuntu();
+    font-weight: 300;
+}
+.contacts__phone{
+    font-size: rem(14px);
+    @include ubuntu();
+    font-weight: bold;
+    color: $red;
+    text-decoration:none;
+    transition: 1s;
+    &:hover{
+        color: $red-hover;
+    }
+}
+.phone-block__icon{
+    height: rem(10px);
+    width: rem(10px);
+}

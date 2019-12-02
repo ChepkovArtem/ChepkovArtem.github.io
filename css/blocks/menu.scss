@@ -1,0 +1,70 @@
+.menu{
+    background: url('../img/menu/menu-bg.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.menu__title{
+    color: $white;
+    position: absolute;
+    top: rem(110px);
+    left: rem(75px);
+}
+.menu-accordeon{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.menu-accordeon__list{
+    height: 100%;
+    display: flex;
+}
+.menu-accordeon__item{
+    height: 100%;
+    display: flex;
+}
+.menu-accordeon__content{
+    width: 0;
+    line-height: 1.7;
+    overflow: hidden;
+    background-color: #2f3234f0;
+}
+.menu-accordeon__triger{
+    cursor: pointer;
+    display: inline-block;
+    min-width: rem(80px);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--active .menu-accordeon__triger-text{
+        color: $yellow;
+    }
+    &--active + .menu-accordeon__content{
+        width: rem(550px);
+        z-index: 2;
+        @include tablets{
+            width: 100%;
+        }
+    }
+    @include phones{
+        &:not(.menu-accordeon__triger--active){
+            display: none;
+        }
+    }
+}
+.menu-accordeon__triger-text{
+    display: block;
+    font-size: rem(40px);
+    position: absolute;
+    white-space: nowrap;
+    transform-origin:0 50%;
+    left: 50%;
+    top: 90%;
+    @include gagalin();
+    color: $white;
+    transform: rotate(-90deg);
+}
+.menu-accordeon__text{
+    padding: rem(40px) rem(20px);
+    color: $white;
+}
