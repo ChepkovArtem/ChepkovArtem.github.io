@@ -4,7 +4,7 @@
 }
 
 .about__content{
-    padding-top: rem(100px);
+    margin-top: 12%;
 }
 .about__list{
     display: flex;
@@ -47,13 +47,13 @@
     }
 }
 .about__name{
-    font-size: rem(24px);
+    font-size: 3vh;
     @include lifehack();
     font-weight: 500;
 }
 .about__text{
     @include ubuntu();
-    font-size: rem(14px);
+    font-size: 1.6vh;
 }
 .about__title{
     text-align: center;

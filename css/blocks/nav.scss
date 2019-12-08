@@ -1,12 +1,19 @@
-.nav__list {
+.nav{
   display: flex;
   align-items: center;
+}
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .nav__item {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 1.5vh;
+  width: auto;
 
   &:after {
     content: "";
@@ -15,7 +22,7 @@
     background-color: $white;
     border-radius: 50%;
     display: block;
-    margin-left: rem(15px);
+    margin-left: 1.5vh;
   }
 
   &:nth-last-child(2) {
@@ -34,6 +41,32 @@
   text-decoration: none;
   font-weight: bold;
   color: $white;
-  font-size: rem(13px);
+  font-size: 1vw;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .nav__link {
+     font-size: 13px;
+  }
+}
+.nav__fullmenu{
+  margin-left: 20px;
+  height: 24px;
+  width: auto;
+  display: none;
+  @include tablets{
+    display: flex;
+  }
+}
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburger__line{
+  width: 24px;
+  height: 4px;
+  border: 1px solid $white;
+  border-radius: 3px;
+  background-color: $white;
 }

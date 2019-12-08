@@ -1,0 +1,140 @@
+.burgers{
+    background: linear-gradient($yellow 20%,$yellow-grad 50%,$yellow 80%);
+}
+.burgers__container{
+    height: 100vh;
+    width: 95%;
+    max-width: rem(1200px);
+    display: flex;
+    align-items: center;
+
+}
+.burgers__arrow{
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    &.prev-arrow{
+        transform: rotate(90deg);
+    }
+    &.next-arrow{
+        transform: rotate(-90deg);
+    }
+}
+.burgers__desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets{
+        align-items: center;
+    }
+}
+.burg-arrow{
+    width: rem(29px);
+    height: rem(15px);
+    position: relative;
+  }
+  .burgers__content{
+      display: flex;
+      @include tablets{
+          flex-direction: column;
+      }
+  }
+  .burgers__title{
+      font-size: 6vh;
+  }
+  .burgers__title, .burgers__text {
+    color: $white;
+    @include tablets{
+        text-align: center;
+    }
+  }
+  .burgers__text{
+      font-size: 1.5vh;
+  }
+  .burgers__price{
+      color: $white;
+      display: flex;
+      align-items: flex-end;
+  }
+  .burgers__cost{
+    color: $red;
+}
+  .burgers__value{
+      color: $red;
+      font-size: 30px;
+      margin-left: 3%;
+  }
+  .nav__order{
+      margin-left: 7%;
+  }
+  .burgers__info{
+      width: 90px;
+      height: 90px;
+      border-radius: 3px;
+      background-color: $yellow-grad;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover{
+          background-color: $orange;
+      }
+      &:hover + .burgers__info--hover{
+        transition: 5s;  
+        display: flex;
+      }
+  }
+  .burgers__picture{
+      min-width: 40vw;
+  }
+  .burgers__info-text{
+      font-size: 14px;
+      color: $white;
+  }
+.burgers__about{
+    display: flex;
+}
+
+  .burgers__info--hover{
+      margin-left: 90px;
+      padding: 18px 26px;
+      border-radius: 3px;
+      display: none;
+      background-color: #ffffffdd;
+      position: absolute;
+  }
+.info__list{
+    display: flex;
+    flex-direction: column;
+}
+.info__item{
+    transition: 5s;
+    display: flex;
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+  .info__desc{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 15px;
+      height: 34px;
+      width: 150px;
+  }
+  .info__icon{
+      height: 34px;
+      width: 39px;
+  }
+  .info__text{
+      font-size: 14px;
+  }
+  .burgers__ccall-icon{
+    height: 60px;
+    width: 60px;
+  }
+  .burgers__img{
+    width: 95%;
+  }

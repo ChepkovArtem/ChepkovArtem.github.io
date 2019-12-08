@@ -1,6 +1,7 @@
 //colors
 $orange: #e45028;
 $yellow: #f9b43b;
+$yellow-grad: #eb8c38;
 $black: #2f3234;
 $black-hover:#1f2122;
 $red: #e35028;
@@ -23,12 +24,14 @@ $z-fixed-menu: 100;
 @import "blocks/nav";
 @import "blocks/nav-order, order";
 @import "blocks/promo";
-@import "blocks/menu.scss";
-@import "blocks/team.scss";
-@import "blocks/delivery.scss";
-@import "blocks/contacts.scss";
-@import "blocks/about.scss";
+@import "blocks/burgers";
+@import "blocks/menu";
+@import "blocks/team";
+@import "blocks/delivery";
+@import "blocks/contacts";
+@import "blocks/about";
 @import "blocks/reviews";
 @import "blocks/fixed-menu";
 @import "blocks/form";
+@import "blocks/fullscreenmenu";
 

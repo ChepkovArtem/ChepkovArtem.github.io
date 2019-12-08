@@ -5,7 +5,9 @@
   background-position: center center;
   position: relative;
 }
-
+.promo__img{
+  width: 95%;
+}
 .promo__container {
   height: 100%;
   display: flex;
@@ -32,7 +34,7 @@
 .promo__subtitle {
   @include lifehack();
   margin-top: rem(20px);
-  font-size: rem(56px);
+  font-size: 5vh;
   color: $white;
   line-height: 1;
   @include tablets{

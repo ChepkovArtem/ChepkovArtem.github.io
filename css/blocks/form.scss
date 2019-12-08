@@ -1,7 +1,10 @@
+.form{
+  width: 100%;
+}
 .delivery__title{
     text-align: center;
     @include tablets{
-      margin-bottom: 10%;
+      margin-bottom: 3%;
     }
 }
 .delivery__container{
@@ -28,24 +31,22 @@
     @include tablets{
       margin-right: 0;
     }
-
   }
   
   .form__row {
     display: flex;
     margin-bottom: rem(15px);
     @include phones{
+      align-items: center;
       justify-content: center;
     }
   }
   
   .form__block {
     flex: 1;
-    margin-right: rem(20px);
     display: block;
-  
-    &:last-child {
-      margin-right: 0;
+    &:not(:last-child) {
+      margin-right: rem(20px);
     }
   }
   .form__block-title{
