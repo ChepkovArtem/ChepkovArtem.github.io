@@ -48,7 +48,7 @@
     }
     @include phones{
         &:not(.menu-accordeon__triger--active){
-            display: none;
+            
         }
     }
 }

@@ -37,6 +37,9 @@
 }
 .about__icon{
     height: rem(100px);
+    width: rem(100px);
+    min-width: 50px;
+
 }
 .about__name,.about__text{
     padding-top: rem(30px);
