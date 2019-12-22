@@ -60,7 +60,7 @@
     background: $white;
     border-radius: 5px;
     border: 3px solid $white;
-    padding: rem(8px) rem(21px);
+    padding: rem(8px) rem(10px);
     width: 100%;
     color: $black;
     @include ubuntu();
@@ -112,7 +112,7 @@
     display: block;
   }
   .checkbox__visible:before{
-    content: "";
+    content: '';
     margin-right: rem(10px);
     display: inline-block;
     vertical-align: middle;
@@ -121,9 +121,17 @@
     background-color: $white;
     transition: 0.5s;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .form__check:checked ~ .checkbox__visible:before {
     background-image: url('../../img/form/check.png');
-    background-repeat: no-repeat;
-    background-position: center;
+  }
+  .form__error{
+    color: $red;
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    @include ubuntu();
+    padding-left: 5px;
   }

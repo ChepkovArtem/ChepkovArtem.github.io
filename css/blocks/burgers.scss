@@ -34,6 +34,8 @@
     position: relative;
   }
   .burgers__content{
+      width: 100%;
+      padding: 0 15px;
       display: flex;
       @include tablets{
           flex-direction: column;
@@ -76,15 +78,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      transition: 0.5s;
+      z-index: 1;
       cursor: pointer;
-      &:hover{
-          background-color: $orange;
-      }
-      &:hover + .burgers__info--hover{
-        transition: 5s;  
-        display: flex;
-      }
   }
   .burgers__picture{
       min-width: 40vw;
@@ -95,22 +90,41 @@
   }
 .burgers__about{
     display: flex;
+    width: auto;
+    max-width: 90px;
+    transition: opacity 0.5s;
+    &:hover .burgers__info{
+        background-color: $orange;
+    }
+    &:hover .burgers__info--hover{ 
+        top: 0px;
+        opacity: 1;
+      }
 }
-
   .burgers__info--hover{
+      min-width: 50px;
       margin-left: 90px;
       padding: 18px 26px;
       border-radius: 3px;
-      display: none;
+      top: -400px;
+      transition: opacity 0.5s;
+      opacity: 0;
       background-color: #ffffffdd;
       position: absolute;
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: -12px;
+        top: -10px;
+      }
   }
 .info__list{
     display: flex;
     flex-direction: column;
 }
 .info__item{
-    transition: 5s;
+    transition: 1s;
     display: flex;
     &:not(:last-child){
         margin-bottom: 20px;
@@ -130,6 +144,18 @@
   }
   .info__text{
       font-size: 14px;
+  }
+  .ccall__number{
+      position: absolute;
+      top: 22px;
+      left: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $white;
+      @include gagalin();
+  }
+  .burgers__ccall{
+      position: relative;
   }
   .burgers__ccall-icon{
     height: 60px;

@@ -22,7 +22,7 @@
     position: absolute;
     right: 0;
     width: 50vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     @include tablets{
@@ -30,7 +30,6 @@
     }
 }
 .team__content{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

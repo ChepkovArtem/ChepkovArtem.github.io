@@ -446,8 +446,12 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s; }
 
 .container {
   width: 100%;
@@ -702,6 +706,8 @@ button {
   position: relative; }
 
 .burgers__content {
+  width: 100%;
+  padding: 0 15px;
   display: flex; }
   @media screen and (max-width: 768px) {
     .burgers__content {
@@ -744,13 +750,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  transition: 0.5s;
+  z-index: 1;
   cursor: pointer; }
-  .burgers__info:hover {
-    background-color: #e45028; }
-  .burgers__info:hover + .burgers__info--hover {
-    transition: 5s;
-    display: flex; }
 
 .burgers__picture {
   min-width: 40vw; }
@@ -760,22 +761,39 @@ button {
   color: #fff; }
 
 .burgers__about {
-  display: flex; }
+  display: flex;
+  width: auto;
+  max-width: 90px;
+  transition: opacity 0.5s; }
+  .burgers__about:hover .burgers__info {
+    background-color: #e45028; }
+  .burgers__about:hover .burgers__info--hover {
+    top: 0px;
+    opacity: 1; }
 
 .burgers__info--hover {
+  min-width: 50px;
   margin-left: 90px;
   padding: 18px 26px;
   border-radius: 3px;
-  display: none;
+  top: -400px;
+  transition: opacity 0.5s;
+  opacity: 0;
   background-color: #ffffffdd;
   position: absolute; }
+  .burgers__info--hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -12px;
+    top: -10px; }
 
 .info__list {
   display: flex;
   flex-direction: column; }
 
 .info__item {
-  transition: 5s;
+  transition: 1s;
   display: flex; }
   .info__item:not(:last-child) {
     margin-bottom: 20px; }
@@ -794,6 +812,18 @@ button {
 
 .info__text {
   font-size: 14px; }
+
+.ccall__number {
+  position: absolute;
+  top: 22px;
+  left: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif; }
+
+.burgers__ccall {
+  position: relative; }
 
 .burgers__ccall-icon {
   height: 60px;
@@ -888,7 +918,7 @@ button {
   position: absolute;
   right: 0;
   width: 50vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center; }
   @media screen and (max-width: 768px) {
@@ -896,7 +926,6 @@ button {
       width: 95%; } }
 
 .team__content {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -1299,7 +1328,7 @@ button {
   background: #fff;
   border-radius: 5px;
   border: 3px solid #fff;
-  padding: 0.5rem 1.3125rem;
+  padding: 0.5rem 0.625rem;
   width: 100%;
   color: #2f3234;
   font-family: 'Ubuntu', Helvetica, sans-serif;
@@ -1346,7 +1375,7 @@ button {
   display: block; }
 
 .checkbox__visible:before {
-  content: "";
+  content: '';
   margin-right: 0.625rem;
   display: inline-block;
   vertical-align: middle;
@@ -1354,12 +1383,21 @@ button {
   height: 0.9375rem;
   background-color: #fff;
   transition: 0.5s;
-  cursor: pointer; }
-
-.form__check:checked ~ .checkbox__visible:before {
-  background-image: url("../../img/form/check.png");
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center; }
+
+.form__check:checked ~ .checkbox__visible:before {
+  background-image: url("../../img/form/check.png"); }
+
+.form__error {
+  color: #e35028;
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  padding-left: 5px; }
 
 .fullscreen-menu {
   position: absolute;
