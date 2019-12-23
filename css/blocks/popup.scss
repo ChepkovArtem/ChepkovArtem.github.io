@@ -1,0 +1,56 @@
+.js-close{
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  color:$red;
+  cursor: pointer;
+}
+.overlay{
+  position: fixed;
+  height: 100vh;
+  background: rgba(24, 24, 24, 0.76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: 1s;
+}
+.overlay__container{
+  width: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include tablets{
+    width: 50%;
+  }
+  @include phones{
+    width: 70%;
+  }
+}
+.overlay__content{
+  display: none;
+  flex-direction: column;
+  background-color: $white;
+  width: auto;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  border: solid 1px $orange;
+  border-radius: 15px;
+}
+.overlay__title{
+  color: $black;
+  @include gagalin();
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.popup{
+  & .overlay{
+    display: flex;
+  }
+  & .overlay__content{
+    display: flex;
+  }
+}

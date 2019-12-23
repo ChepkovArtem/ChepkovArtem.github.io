@@ -3,10 +3,6 @@ const sendButton = document.querySelector('#make-order');
 
 sendButton.addEventListener('click', function(event){
     event.preventDefault();
-    console.log(myForm.elements.name.value);
-    console.log(myForm.elements.phone.value);
-    console.log(myForm.elements.comment.value);
-
     if (validateForm(myForm)){
         const data ={
             name: myForm.elements.name.value,

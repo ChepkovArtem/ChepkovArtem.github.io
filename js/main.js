@@ -15,6 +15,7 @@ closeMenu.addEventListener('click',function(){
 
 fullScreenMenu.addEventListener('click',function(event){
   console.log(event);
+  event.preventDefault();
   if(event.target===fullScreenMenu){
     fullScreenMenu.style.display = 'none';
   }
