@@ -2,3 +2,12 @@
     background: url('../img/work.png') center center no-repeat;
     background-size: cover;
 }
+.work__title{
+    text-align: center;
+    color: $black;
+    margin-bottom: 10vh;
+}
+.player{
+display: flex;
+justify-content: center;
+}

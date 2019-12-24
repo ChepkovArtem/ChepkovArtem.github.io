@@ -11,6 +11,7 @@
 .promo__container {
   height: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .promo__content {
@@ -55,9 +56,14 @@
   transform: translateX(-50%);
 }
 .arrow{
+  cursor: pointer;
   width: rem(29px);
   height: rem(15px);
   position: absolute;
   bottom: rem(30px);
-  left: 50%;
+  transition: 0.7s;
+  &:hover{
+    width: rem(45px);
+    height: rem(23px);
+  }
 }

@@ -62,3 +62,8 @@ $(document).on("keydown", e=>{
         }
     }
 });
+
+$("[data-scroll-to]").on("click", e => {
+    e.preventDefault();
+    performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
+  });

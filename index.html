@@ -22,28 +22,28 @@
                         <nav class="nav">
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a href="#about-page" class="nav__link">о нас</a>
+                                    <a href="" class="nav__link" data-scroll-to="1">о нас</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#burgers-page" class="nav__link">бургеры</a>
+                                    <a href="" class="nav__link" data-scroll-to="2">бургеры</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#team-page" class="nav__link">команда</a>
+                                    <a href="" class="nav__link" data-scroll-to="3">команда</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#menu-page" class="nav__link">меню</a>
+                                    <a href="" class="nav__link" data-scroll-to="4">меню</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#reviews-page" class="nav__link">отзывы</a>
+                                    <a href="" class="nav__link" data-scroll-to="5">отзывы</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">как мы работаем</a>
+                                    <a href="" class="nav__link" data-scroll-to="6">как мы работаем</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#contacts-page" class="nav__link">контакты</a>
+                                    <a href="" class="nav__link" data-scroll-to="8">контакты</a>
                                 </li>
                                 <li class="">
-                                    <a href="#delivery-page" class="nav__order order--button">Заказать</a>
+                                    <a href="" class="nav__order order--button" data-scroll-to="7">Заказать</a>
                                 </li>
                             </ul>
                             <div class="nav__fullmenu">
@@ -63,7 +63,7 @@
                             <p class="promo__subtitle">Натуральные бургеры</p>
                         </h1>
                     </div>
-                    <svg class="arrow-icon arrow">
+                    <svg class="arrow-icon arrow" data-scroll-to="1">
                         <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
                     </svg>
                 </div>
@@ -630,7 +630,22 @@
 
             <section class="section work" id="work-page">
                 <div class="container work__container">
-                    <h1 class="about__title title">как мы работаем</h1>
+                    <h1 class="work__title title">как мы работаем</h1>
+                    <div class="player">
+                        <div class="player__wrapper">
+                            <div id="yt-player"></div>
+                        </div>
+                        <div class="player__controls">
+                            <button class="player__start"></button>
+                            <div class="player__playback">
+                                <button class="player__playback-button"></button>
+                            </div>
+                            <div class="player__duration">
+                                <span class="player__duration-completed"></span>
+                                <span class="player__duration-estimate"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -770,25 +785,25 @@
                 </div>
                 <ul class="fullscreen-menu__list">
                     <li class="fullscreen-menu__item">
-                        <a href="#about-page" class="fullscreen-menu__link">о нас</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="1">о нас</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#burgers-page" class="fullscreen-menu__link">бургеры</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="2">бургеры</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#team-page" class="fullscreen-menu__link">команда</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="3">команда</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#menu-page" class="fullscreen-menu__link">меню</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="4">меню</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#reviews-page" class="fullscreen-menu__link">отзывы</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="5">отзывы</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#" class="fullscreen-menu__link">как мы работаем</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="6">как мы работаем</a>
                     </li>
                     <li class="fullscreen-menu__item">
-                        <a href="#contacts-page" class="fullscreen-menu__link">контакты</a>
+                        <a href="" class="fullscreen-menu__link" data-scroll-to="8">контакты</a>
                     </li>
                 </ul>
                 <div class="fullscreen-menu__closer">
@@ -799,6 +814,7 @@
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script defer src="./js/jquery.bxslider.js"></script>
+        <script defer src="https://www.youtube.com/iframe_api"></script>
 
         <script defer src="./js/main.js"></script>
         <script defer src="./js/one-page.js"></script>
@@ -806,6 +822,7 @@
         <script defer src="./js/ymap.js"></script>
         <script defer src="./js/form_order.js"></script>
         <script defer src="./js/slider.js"></script>
+        <script defer src="./js/player.js"></script>
     </div>
 </body>
 
