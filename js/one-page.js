@@ -8,6 +8,7 @@ const performTransition = sectionEq =>{
         const position = sectionEq * - 100;
 
         sections
+
             .eq(sectionEq)
             .addClass("active")
             .siblings()
@@ -19,6 +20,11 @@ const performTransition = sectionEq =>{
 
     setTimeout(()=>{
         inScroll=false;
+        $('.fixed-menu__item')
+        .eq(sectionEq)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
     }, 800);
 }
 };
@@ -65,5 +71,8 @@ $(document).on("keydown", e=>{
 
 $("[data-scroll-to]").on("click", e => {
     e.preventDefault();
-    performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+
+    performTransition(target);
   });
