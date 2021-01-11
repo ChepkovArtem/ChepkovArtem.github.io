@@ -21,11 +21,14 @@
     }
 }
 .burgers__desc{
+    margin-left: 50px;
+    min-width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include tablets{
-        align-items: center;
+      margin-left: 0;
+      align-items: center;
     }
 }
 .burg-arrow{
@@ -35,11 +38,12 @@
     transition: 0.7s;
   }
   .burgers__content{
-      width: 100%;
+      width: 95%;
       padding: 0 15px;
       display: flex;
       @include tablets{
-          flex-direction: column;
+        width: 90%;
+        flex-direction: column;
       }
   }
   .burgers__title{
@@ -57,15 +61,24 @@
   .burgers__price{
       color: $white;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      @include tablets{
+        width: 100%;
+      }
   }
   .burgers__cost{
     color: $red;
+    @include tablets{
+      font-size: 5vh;
+    }
 }
   .burgers__value{
       color: $red;
       font-size: 30px;
       margin-left: 3%;
+    @include tablets{
+      font-size: 5vh;
+    }
   }
   .burgers__order{
       margin-left: 7%;
@@ -83,7 +96,7 @@
       cursor: pointer;
   }
   .burgers__picture{
-      min-width: 40vw;
+      min-width: 40%;
   }
   .burgers__info-text{
       font-size: 14px;
@@ -163,5 +176,5 @@
     width: 60px;
   }
   .burgers__img{
-    width: 95%;
+    width: auto;
   }
